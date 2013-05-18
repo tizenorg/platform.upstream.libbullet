@@ -51,9 +51,6 @@ make %{?jobs:-j%jobs}
   
 %files devel  
 %defattr(-,root,root,-)  
-%{_includedir}/bullet/*.h
-%{_includedir}/bullet/*/*/*/*.h
-%{_includedir}/bullet/*/*/*.h
-%{_includedir}/bullet/*/*.h
+%{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
