@@ -14,13 +14,13 @@ Bullet Continuous Collision Detection and Physics Library
 Summary: Bullet Continuous Collision Detection and Physics Library
 Group: System/Libraries
 
-%description
+%description -n libbullet
 Bullet Continuous Collision Detection and Physics Library
   
 %package devel  
 Summary:    Development components for the bullet
 Group:      Development/Libraries  
-Requires:   %{name} = %{version}-%{release}  
+Requires:   libbullet = %{version}-%{release}  
   
 %description devel  
 Bullet Continuous Collision Detection and Physics Library (devel) 
@@ -37,10 +37,9 @@ make %{?jobs:-j%jobs}
 %install  
 %make_install
   
-%post -p /sbin/ldconfig  
+%post -p /sbin/ldconfig   -n libbullet
 
-%postun -p /sbin/ldconfig  
-  
+%postun -p /sbin/ldconfig  -n libbullet
   
 %files -n libbullet  
 %manifest bullet.manifest
