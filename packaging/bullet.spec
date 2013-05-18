@@ -6,6 +6,7 @@ License: Zlib
 Group: System/Libraries
 Source: %{name}-%{version}.tar.gz 
 BuildRequires: cmake 
+Source1001:     bullet.manifest
 
 %description
 Bullet Continuous Collision Detection and Physics Library
@@ -27,6 +28,7 @@ Bullet Continuous Collision Detection and Physics Library (devel)
   
 %prep  
 %setup -q
+cp %{SOURCE1001} .
   
 %build  
   
