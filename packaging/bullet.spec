@@ -44,12 +44,13 @@ make %{?jobs:-j%jobs}
 %postun -p /sbin/ldconfig  -n libbullet
   
 %files -n libbullet  
-%manifest bullet.manifest
+%manifest %{name}.manifest
 %license COPYING
 %defattr(-,root,root,-)  
 %{_libdir}/*.so.%{version}
   
 %files devel  
+%manifest %{name}.manifest
 %defattr(-,root,root,-)  
 %{_includedir}/*
 %{_libdir}/*.so
